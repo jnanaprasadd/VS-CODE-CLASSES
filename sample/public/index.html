@@ -1,0 +1,119 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    
+    *{
+      padding:0;
+      margin: 0;
+    } 
+    
+    div{
+      background:linear-gradient(to top left,#838786,#7dd56f);
+      height:100vh ;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      flex-direction: column;  
+      
+    }
+    button{
+      height: 50px;
+      width: 70px;
+      background-color: blanchedalmond;
+     
+    }
+ 
+  </style>
+  <body>
+    <div>
+      <h1>Java Sript....</h1>
+      <button onclick="word()"> click me</button>
+    </div>
+  
+  </body>
+  <script src="index.js">
+    
+  </script>
+  
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact forms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="contentcontainer">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="left-container"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="3e6f4827-c3c4-4f8b-9cc9-a71c2cadd954"
+        />
+        <div class="contact-left-title">
+          <h2>Contact</h2>
+          <hr />
+        </div>
+        <input
+          class="contact-inputs"
+          type="email"
+          name=" email"
+          placeholder="enter your email"
+        />
+        <input
+          class="contact-inputs"
+          type="text"
+          name="name"
+          placeholder="entre your name"
+          ;
+        />
+        <textarea
+          class="message"
+          class="contact-inputs"
+          name="message"
+          placeholder="Text message"
+        ></textarea>
+
+        <button class="button">submit</button>
+      </form>
+      <div class="right-container">
+        <!-- <img src="https://www.pngkey.com/png/full/7-78878_sunset-png.png"> -->
+        <div id="observablehq-chart-69812f4d"></div>
+      </div>
+    </div>
+    <div id="observablehq-chart-69812f4d"></div>
+    <div id="observablehq-data-69812f4d"></div> 
+    <script type="module">
+      import {
+        Runtime,
+        Inspector,
+      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/@d3/disjoint-force-directed-graph/2.js?v=4";
+      new Runtime().module(define, (name) => {
+        if (name === "chart")
+          return new Inspector(
+            document.querySelector("#observablehq-chart-69812f4d")
+          );
+        if (name === "data")
+          return new Inspector(
+            document.querySelector("#observablehq-data-69812f4d")
+          );
+      });
+    </script>
+  </body>
+</html>
